@@ -13,3 +13,8 @@ process.stdin.on('data', (data) => {
 rl.on('close', () => {
   console.log('By, By!');
 });
+rl.on('line', (input) => {
+  if (input === 'exit') {
+    rl.close();
+  }
+});
